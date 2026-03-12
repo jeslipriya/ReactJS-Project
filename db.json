@@ -31,7 +31,9 @@
       "tenantId": "tenant1",
       "status": "active",
       "joinedAt": "2024-01-15",
-      "avatar": "https://ui-avatars.com/api/?name=Jesli&background=7A5C4D&color=fff"
+      "avatar": "https://ui-avatars.com/api/?name=Jesli&background=7A5C4D&color=fff&size=128",
+      "phone": "1234356789768",
+      "position": "tester"
     },
     {
       "name": "jesli",
@@ -41,7 +43,7 @@
       "tenantId": "",
       "id": "1773327401862",
       "joinedAt": "2026-03-12",
-      "status": "active",
+      "status": "inactive",
       "avatar": "https://ui-avatars.com/api/?name=jesli&background=7A5C4D&color=fff"
     }
   ],
@@ -135,6 +137,26 @@
       "details": "Updated user: Zoho Admin",
       "id": "1773334629284",
       "timestamp": "2026-03-12T16:57:09.284Z",
+      "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "ip": "127.0.0.1"
+    },
+    {
+      "action": "UPDATE",
+      "user": "Admin User",
+      "role": "admin",
+      "details": "Updated user: Jesli",
+      "id": "1773335251850",
+      "timestamp": "2026-03-12T17:07:31.850Z",
+      "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "ip": "127.0.0.1"
+    },
+    {
+      "action": "UPDATE",
+      "user": "Admin User",
+      "role": "admin",
+      "details": "Updated user: jesli",
+      "id": "1773335261135",
+      "timestamp": "2026-03-12T17:07:41.135Z",
       "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
       "ip": "127.0.0.1"
     }
