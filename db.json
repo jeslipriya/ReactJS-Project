@@ -20,7 +20,7 @@
       "tenantId": "tenant1",
       "status": "active",
       "joinedAt": "2024-01-01",
-      "avatar": "https://ui-avatars.com/api/?name=Zoho+Admin&background=7A5C4D&color=fff"
+      "avatar": "https://ui-avatars.com/api/?name=Zoho Admin&background=7A5C4D&color=fff"
     },
     {
       "id": "3",
@@ -125,6 +125,16 @@
       "details": "User logged in successfully",
       "timestamp": "2026-03-12T15:24:50.072Z",
       "id": "1773329090072",
+      "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "ip": "127.0.0.1"
+    },
+    {
+      "action": "UPDATE",
+      "user": "Admin User",
+      "role": "admin",
+      "details": "Updated user: Zoho Admin",
+      "id": "1773334629284",
+      "timestamp": "2026-03-12T16:57:09.284Z",
       "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
       "ip": "127.0.0.1"
     }
