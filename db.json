@@ -1,0 +1,132 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin User",
+      "email": "admin@system.com",
+      "password": "admin123",
+      "role": "admin",
+      "tenantId": null,
+      "status": "active",
+      "joinedAt": "2024-01-01",
+      "avatar": "https://ui-avatars.com/api/?name=Admin+User&background=7A5C4D&color=fff"
+    },
+    {
+      "id": "2",
+      "name": "Zoho Admin",
+      "email": "admin@zoho.com",
+      "password": "tenant123",
+      "role": "tenant",
+      "tenantId": "tenant1",
+      "status": "active",
+      "joinedAt": "2024-01-01",
+      "avatar": "https://ui-avatars.com/api/?name=Zoho+Admin&background=7A5C4D&color=fff"
+    },
+    {
+      "id": "3",
+      "name": "Jesli",
+      "email": "jesli@zoho.com",
+      "password": "user123",
+      "role": "user",
+      "tenantId": "tenant1",
+      "status": "active",
+      "joinedAt": "2024-01-15",
+      "avatar": "https://ui-avatars.com/api/?name=Jesli&background=7A5C4D&color=fff"
+    },
+    {
+      "name": "jesli",
+      "email": "jesli@gmail.com",
+      "password": "jesli@07",
+      "role": "tenant",
+      "tenantId": "",
+      "id": "1773327401862",
+      "joinedAt": "2026-03-12",
+      "status": "active",
+      "avatar": "https://ui-avatars.com/api/?name=jesli&background=7A5C4D&color=fff"
+    }
+  ],
+  "tenants": [
+    {
+      "id": "tenant1",
+      "name": "Zoho Corporation",
+      "email": "contact@zoho.com",
+      "plan": "Enterprise",
+      "usersCount": 2,
+      "createdAt": "2024-01-01",
+      "status": "active",
+      "logo": "https://ui-avatars.com/api/?name=Zoho+Corporation&background=7A5C4D&color=fff"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log1",
+      "action": "LOGIN",
+      "user": "Admin User",
+      "role": "admin",
+      "timestamp": "2024-01-20T10:30:00.000Z",
+      "details": "User logged in successfully",
+      "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+      "ip": "127.0.0.1"
+    },
+    {
+      "action": "REGISTER",
+      "user": "jesli",
+      "role": "tenant",
+      "details": "New user registered",
+      "timestamp": "2026-03-12T14:56:41.907Z",
+      "id": "1773327401907",
+      "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "ip": "127.0.0.1"
+    },
+    {
+      "action": "LOGIN",
+      "user": "jesli",
+      "role": "tenant",
+      "details": "User logged in successfully",
+      "timestamp": "2026-03-12T14:56:59.587Z",
+      "id": "1773327419587",
+      "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "ip": "127.0.0.1"
+    },
+    {
+      "action": "LOGOUT",
+      "user": "jesli",
+      "role": "tenant",
+      "details": "User logged out",
+      "timestamp": "2026-03-12T14:57:18.357Z",
+      "id": "1773327438357",
+      "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "ip": "127.0.0.1"
+    },
+    {
+      "action": "LOGIN",
+      "user": "Admin User",
+      "role": "admin",
+      "details": "User logged in successfully",
+      "timestamp": "2026-03-12T14:57:38.903Z",
+      "id": "1773327458903",
+      "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "ip": "127.0.0.1"
+    },
+    {
+      "action": "LOGIN",
+      "user": "Jesli",
+      "role": "user",
+      "details": "User logged in successfully",
+      "timestamp": "2026-03-12T15:20:05.938Z",
+      "id": "1773328805938",
+      "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "ip": "127.0.0.1"
+    },
+    {
+      "action": "LOGIN",
+      "user": "Admin User",
+      "role": "admin",
+      "details": "User logged in successfully",
+      "timestamp": "2026-03-12T15:24:50.072Z",
+      "id": "1773329090072",
+      "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "ip": "127.0.0.1"
+    }
+  ]
+}
