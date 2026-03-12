@@ -81,7 +81,7 @@ multi-tenant/
 ### Clone the Repository
 
 ```
-git clone <repository-url>
+git clone https://github.com/jeslipriya/ReactJS-Project.git
 cd multi-tenant
 ```
 
@@ -214,4 +214,4 @@ This project is licensed under the MIT License.
 
 Jesli
 
->> Built for learning modern React development and full-stack dashboard architecture.
+> Built for learning modern React development and full-stack dashboard architecture.
