@@ -45,6 +45,17 @@
       "joinedAt": "2026-03-12",
       "status": "inactive",
       "avatar": "https://ui-avatars.com/api/?name=jesli&background=7A5C4D&color=fff"
+    },
+    {
+      "id": "1773336949986",
+      "name": "TCS Admin",
+      "email": "admin@contact.com",
+      "password": "tenant123",
+      "role": "tenant",
+      "tenantId": "1773336949864",
+      "status": "active",
+      "joinedAt": "2026-03-12",
+      "avatar": "https://ui-avatars.com/api/?name=TCS+Admin&background=7A5C4D&color=fff&size=128"
     }
   ],
   "tenants": [
@@ -57,6 +68,20 @@
       "createdAt": "2024-01-01",
       "status": "active",
       "logo": "https://ui-avatars.com/api/?name=Zoho+Corporation&background=7A5C4D&color=fff"
+    },
+    {
+      "name": "TCS",
+      "email": "tcs@contact.com",
+      "plan": "Professional",
+      "status": "active",
+      "phone": "1234567890",
+      "website": "https://www.tcs.com",
+      "industry": "technology",
+      "address": "qwAEDRYHFJGFBDVasZ",
+      "id": "1773336949864",
+      "usersCount": 0,
+      "createdAt": "2026-03-12",
+      "logo": "https://ui-avatars.com/api/?name=TCS&background=7A5C4D&color=fff&size=128"
     }
   ],
   "auditLogs": [
@@ -157,6 +182,26 @@
       "details": "Updated user: jesli",
       "id": "1773335261135",
       "timestamp": "2026-03-12T17:07:41.135Z",
+      "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "ip": "127.0.0.1"
+    },
+    {
+      "action": "LOGIN",
+      "user": "Admin User",
+      "role": "admin",
+      "details": "User logged in successfully",
+      "timestamp": "2026-03-12T17:34:22.351Z",
+      "id": "1773336862351",
+      "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "ip": "127.0.0.1"
+    },
+    {
+      "action": "CREATE",
+      "user": "Admin User",
+      "role": "admin",
+      "details": "Created tenant: TCS",
+      "id": "1773336950045",
+      "timestamp": "2026-03-12T17:35:50.045Z",
       "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
       "ip": "127.0.0.1"
     }

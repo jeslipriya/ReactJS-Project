@@ -2,7 +2,7 @@ import axios from 'axios'
 import toast from 'react-hot-toast'
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000',
+  baseURL: 'https://reactjs-project-q3cc.onrender.com',
   timeout: 10000,
 })
 
