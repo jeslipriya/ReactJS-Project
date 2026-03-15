@@ -14,11 +14,32 @@ export const AuthProvider = ({ children }) => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('user')
-    if (storedUser) {
-      setUser(JSON.parse(storedUser))
+    const loadUser = async () => {
+      try {
+        const storedUser = localStorage.getItem('user')
+        if (storedUser) {
+          const userData = JSON.parse(storedUser)
+          // Optional: Verify the user still exists in backend
+          // This prevents issues if user was deleted but localStorage still has data
+          try {
+            const response = await axios.get(`https://reactjs-project-q3cc.onrender.com/users/${userData.id}`)
+            setUser(response.data)
+          } catch (error) {
+            // User no longer exists in backend, clear localStorage
+            localStorage.removeItem('user')
+            setUser(null)
+          }
+        }
+      } catch (error) {
+        console.error('Error loading user:', error)
+        localStorage.removeItem('user')
+        setUser(null)
+      } finally {
+        setLoading(false)
+      }
     }
-    setLoading(false)
+
+    loadUser()
   }, [])
 
   const login = async (email, password) => {
@@ -40,6 +61,9 @@ export const AuthProvider = ({ children }) => {
         })
         
         toast.success(`Welcome back, ${userData.name}!`)
+        
+        // Store last route
+        localStorage.setItem('lastRoute', `/${userData.role}`)
         
         // Redirect based on role
         switch(userData.role) {
@@ -119,6 +143,7 @@ export const AuthProvider = ({ children }) => {
     
     setUser(null)
     localStorage.removeItem('user')
+    localStorage.removeItem('lastRoute')
     toast.success('Logged out successfully')
     navigate('/login')
   }
