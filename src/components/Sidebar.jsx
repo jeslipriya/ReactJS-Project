@@ -32,8 +32,7 @@ const Sidebar = ({ isOpen, onClose }) => {
         ]
       case 'user':
         return [
-          { path: '/user', icon: LayoutDashboard, label: 'Dashboard' },
-          { path: '/user/profile', icon: UserCircle, label: 'Profile' },
+          { path: '/user', icon: LayoutDashboard, label: 'Dashboard' }
         ]
       default:
         return []
