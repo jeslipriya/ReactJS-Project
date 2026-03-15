@@ -90,21 +90,21 @@ const UserDashboard = () => {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        className="lg:hidden fixed top-4 left-4 z-40 p-3 bg-primary text-white rounded-xl shadow-soft"
+        className="fixed top-4 left-4 z-40 p-3 bg-primary text-white rounded-xl shadow-soft"
       >
         <Menu size={20} />
       </button>
       
-      <main className="flex-1 lg:ml-64 p-4 lg:p-8">
+      <main className="flex-1 lg:ml-0 p-4 lg:p-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
           {/* Welcome Header with Notifications */}
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
             <div>
-              <h1 className="text-3xl font-bold text-text">
+              <h1 className="text-2xl md:text-3xl font-bold text-text">
                 {getGreeting()}, {user?.name}! 👋
               </h1>
               <p className="text-textLight mt-1">
