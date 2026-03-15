@@ -33,7 +33,8 @@ import {
   Unlock,
   Key,
   Upload,
-  Image as ImageIcon
+  Image as ImageIcon,
+  Menu
 } from 'lucide-react'
 import Sidebar from '../../components/Sidebar'
 import api from '../../services/api'
@@ -67,6 +68,7 @@ const Users = () => {
   const [selectedUsers, setSelectedUsers] = useState([])
   const [loading, setLoading] = useState(false)
   const [exportFormat, setExportFormat] = useState('csv')
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [sortConfig, setSortConfig] = useState({ key: 'name', direction: 'asc' })
   const [currentPage, setCurrentPage] = useState(1)
   const [usersPerPage] = useState(10)
@@ -441,9 +443,17 @@ const Users = () => {
 
   return (
     <div className="flex min-h-screen bg-background">
-      <Sidebar />
+      <Sidebar isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
       
-      <main className="flex-1 w-full min-h-screen overflow-y-auto">
+      {/* Mobile Menu Button */}
+      <button
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        className="lg:hidden fixed top-4 left-4 z-40 p-3 bg-primary text-white rounded-xl shadow-soft"
+      >
+        <Menu size={20} />
+      </button>
+      
+      <main className="flex-1 w-full min-h-screen overflow-y-auto lg:ml-64">
         <div className="p-4 lg:p-8 w-full max-w-[1600px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
