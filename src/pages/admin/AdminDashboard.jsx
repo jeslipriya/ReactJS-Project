@@ -297,18 +297,18 @@ const AdminDashboard = () => {
 
   return (
     <div className="flex min-h-screen bg-background">
-      <Sidebar />
+      <Sidebar isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
       
       {/* Mobile Menu Button */}
       <button
-        onClick={() => setIsMobileMenuOpen(true)}
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         className="lg:hidden fixed top-4 left-4 z-40 p-3 bg-primary text-white rounded-xl shadow-soft"
       >
         <Menu size={20} />
       </button>
 
       {/* Main Content */}
-      <main className="flex-1 w-full min-h-screen overflow-y-auto">
+      <main className="flex-1 w-full min-h-screen overflow-y-auto lg:ml-64">
         <div className="p-4 lg:p-8 w-full max-w-[1600px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
