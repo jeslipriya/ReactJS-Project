@@ -121,27 +121,27 @@ const TenantUsers = () => {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        className="lg:hidden fixed top-4 left-4 z-40 p-3 bg-primary text-white rounded-xl shadow-soft"
+        className="fixed top-4 left-4 z-40 p-3 bg-primary text-white rounded-xl shadow-soft"
       >
         <Menu size={20} />
       </button>
       
-      <main className="flex-1 p-8 lg:ml-64">
+      <main className="flex-1 p-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
           {/* Header */}
-          <div className="flex justify-between items-center mb-8">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
             <div>
-              <h1 className="text-3xl font-bold text-text">Team Management</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold text-text">Team Management</h1>
               <p className="text-textLight mt-1">Manage your company team members</p>
             </div>
             
             <button
               onClick={() => setShowInviteForm(true)}
-              className="btn-primary flex items-center gap-2"
+              className="btn-primary flex items-center gap-2 w-full sm:w-auto justify-center"
             >
               <UserPlus size={18} />
               <span>Invite Member</span>
