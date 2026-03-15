@@ -44,10 +44,10 @@ const Sidebar = ({ isOpen, onClose }) => {
 
   return (
     <>
-      {/* Mobile Overlay */}
+      {/* Overlay for all screen sizes when sidebar is open */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black/50 z-40"
           onClick={onClose}
         />
       )}
@@ -60,10 +60,10 @@ const Sidebar = ({ isOpen, onClose }) => {
         }}
         transition={{ duration: 0.3 }}
         className={`
-          fixed lg:static top-0 left-0 z-50 lg:z-auto
+          fixed top-0 left-0 z-50
           w-64 bg-sidebar border-r border-border 
           min-h-screen p-6 flex flex-col
-          ${isOpen ? 'block' : 'hidden lg:block'}
+          ${isOpen ? 'block' : 'hidden'}
         `}
       >
         <div className="mb-8">
@@ -76,7 +76,7 @@ const Sidebar = ({ isOpen, onClose }) => {
             <NavLink
               key={item.path}
               to={item.path}
-              onClick={() => isOpen && onClose()} // Close sidebar on mobile when navigating
+              onClick={() => onClose()} // Close sidebar when navigating
               className={({ isActive }) => `
                 flex items-center gap-3 px-4 py-3 rounded-xl mb-2 transition-all duration-300
                 ${isActive 
