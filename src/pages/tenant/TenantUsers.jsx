@@ -5,7 +5,8 @@ import {
   UserPlus, 
   Mail,
   Settings,
-  AlertTriangle
+  AlertTriangle,
+  Menu
 } from 'lucide-react'
 import Sidebar from '../../components/Sidebar'
 import UserTable from '../../components/UserTable'
@@ -23,6 +24,7 @@ const TenantUsers = () => {
     email: '',
     password: 'user123'
   })
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     fetchData()
@@ -114,9 +116,17 @@ const TenantUsers = () => {
 
   return (
     <div className="flex min-h-screen bg-background">
-      <Sidebar />
+      <Sidebar isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
       
-      <main className="flex-1 p-8">
+      {/* Mobile Menu Button */}
+      <button
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        className="lg:hidden fixed top-4 left-4 z-40 p-3 bg-primary text-white rounded-xl shadow-soft"
+      >
+        <Menu size={20} />
+      </button>
+      
+      <main className="flex-1 p-8 lg:ml-64">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
