@@ -51,7 +51,6 @@ const Sidebar = () => {
       className="w-64 bg-sidebar border-r border-border min-h-screen p-6 flex flex-col"
     >
       <div className="mb-8">
-        <img src={logo} alt="logo" className="w-32 mb-2" />
         <h1 className="text-2xl font-bold text-primary">MultiTenant</h1>
         <p className="text-sm text-textLight mt-1">Welcome back, {user?.name}</p>
       </div>
