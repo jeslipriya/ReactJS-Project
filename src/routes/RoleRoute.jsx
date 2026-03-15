@@ -1,11 +1,18 @@
+import { useState, useEffect } from 'react'
 import { Navigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 
 const RoleRoute = ({ children, allowedRoles }) => {
   const { user, loading } = useAuth()
+  const [minLoading, setMinLoading] = useState(true)
 
-  // Show loading spinner while checking authentication
-  if (loading) {
+  useEffect(() => {
+    // Ensure spinner shows for at least 300ms to prevent flicker
+    const timer = setTimeout(() => setMinLoading(false), 300)
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (loading || minLoading) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
@@ -13,12 +20,10 @@ const RoleRoute = ({ children, allowedRoles }) => {
     )
   }
 
-  // If no user, redirect to login
   if (!user) {
     return <Navigate to="/login" replace />
   }
 
-  // If user's role is not allowed, redirect to their appropriate dashboard
   if (!allowedRoles.includes(user.role)) {
     switch(user.role) {
       case 'admin':
@@ -32,7 +37,6 @@ const RoleRoute = ({ children, allowedRoles }) => {
     }
   }
 
-  // All checks passed, render the protected component
   return children
 }
 
