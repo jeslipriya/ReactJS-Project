@@ -16,7 +16,8 @@ import {
   Bell,
   MessageCircle,
   FileText,
-  Briefcase
+  Briefcase,
+  Menu
 } from 'lucide-react'
 import Sidebar from '../../components/Sidebar'
 import StatsCard from '../../components/StatsCard'
@@ -29,6 +30,7 @@ const UserDashboard = () => {
   const [tenant, setTenant] = useState(null)
   const [teamMembers, setTeamMembers] = useState([])
   const [recentActivity, setRecentActivity] = useState([])
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [stats, setStats] = useState({
     teamSize: 0,
     projects: 0,
@@ -83,9 +85,17 @@ const UserDashboard = () => {
 
   return (
     <div className="flex min-h-screen bg-background">
-      <Sidebar />
+      <Sidebar isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
       
-      <main className="flex-1 lg:ml-72 p-4 lg:p-8">
+      {/* Mobile Menu Button */}
+      <button
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        className="lg:hidden fixed top-4 left-4 z-40 p-3 bg-primary text-white rounded-xl shadow-soft"
+      >
+        <Menu size={20} />
+      </button>
+      
+      <main className="flex-1 lg:ml-64 p-4 lg:p-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
