@@ -16,6 +16,8 @@ import {
   Calendar,
   Globe,
   Shield,
+  LogIn,
+  LogOut,
   Trash2,
   Edit,
   Eye,
