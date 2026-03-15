@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await axios.get(`http://localhost:5000/users?email=${email}&password=${password}`)
+      const response = await axios.get(`https://reactjs-project-q3cc.onrender.com/users?email=${email}&password=${password}`)
       const users = response.data
       
       if (users.length > 0) {
@@ -66,7 +66,7 @@ export const AuthProvider = ({ children }) => {
   const register = async (userData) => {
     try {
       // Check if user exists
-      const existingUser = await axios.get(`http://localhost:5000/users?email=${userData.email}`)
+      const existingUser = await axios.get(`https://reactjs-project-q3cc.onrender.com/users?email=${userData.email}`)
       if (existingUser.data.length > 0) {
         toast.error('User already exists')
         return
@@ -81,12 +81,12 @@ export const AuthProvider = ({ children }) => {
         avatar: `https://ui-avatars.com/api/?name=${userData.name}&background=7A5C4D&color=fff`
       }
 
-      const response = await axios.post('http://localhost:5000/users', newUser)
+      const response = await axios.post('https://reactjs-project-q3cc.onrender.com/users', newUser)
       
       // Update tenant users count if applicable
       if (userData.tenantId) {
-        const tenant = await axios.get(`http://localhost:5000/tenants/${userData.tenantId}`)
-        await axios.patch(`http://localhost:5000/tenants/${userData.tenantId}`, {
+        const tenant = await axios.get(`https://reactjs-project-q3cc.onrender.com/tenants/${userData.tenantId}`)
+        await axios.patch(`https://reactjs-project-q3cc.onrender.com/tenants/${userData.tenantId}`, {
           usersCount: tenant.data.usersCount + 1
         })
       }
