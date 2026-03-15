@@ -302,13 +302,13 @@ const AdminDashboard = () => {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        className="lg:hidden fixed top-4 left-4 z-40 p-3 bg-primary text-white rounded-xl shadow-soft"
+        className="fixed top-4 left-4 z-40 p-3 bg-primary text-white rounded-xl shadow-soft"
       >
         <Menu size={20} />
       </button>
 
       {/* Main Content */}
-      <main className="flex-1 w-full min-h-screen overflow-y-auto lg:ml-64">
+      <main className="flex-1 w-full min-h-screen overflow-y-auto">
         <div className="p-4 lg:p-8 w-full max-w-[1600px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -317,7 +317,7 @@ const AdminDashboard = () => {
             className="w-full"
           >
             {/* Header with Welcome and Actions */}
-            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8 w-full">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 w-full">
               <div>
                 <h1 className="text-2xl lg:text-3xl font-bold text-text">Dashboard</h1>
                 <p className="text-textLight mt-1">
@@ -325,31 +325,31 @@ const AdminDashboard = () => {
                 </p>
               </div>
               
-              <div className="flex flex-wrap gap-3 w-full lg:w-auto">
+              <div className="flex flex-wrap gap-3 w-full md:w-auto">
                 <button
                   onClick={() => setShowTenantForm(true)}
-                  className="btn-primary flex items-center justify-center gap-2 flex-1 lg:flex-none px-6"
+                  className="btn-primary flex items-center justify-center gap-2 flex-1 md:flex-none px-6"
                 >
                   <Building2 size={18} />
                   <span>New Tenant</span>
                 </button>
                 <button
                   onClick={() => setShowUserForm(true)}
-                  className="btn-primary flex items-center justify-center gap-2 flex-1 lg:flex-none px-6 bg-green-600 hover:bg-green-700"
+                  className="btn-primary flex items-center justify-center gap-2 flex-1 md:flex-none px-6 bg-green-600 hover:bg-green-700"
                 >
                   <UserPlus size={18} />
                   <span>New User</span>
                 </button>
                 <button
                   onClick={() => setShowReports(true)}
-                  className="btn-secondary flex items-center justify-center gap-2 flex-1 lg:flex-none px-6"
+                  className="btn-secondary flex items-center justify-center gap-2 flex-1 md:flex-none px-6"
                 >
                   <Download size={18} />
                   <span>Export</span>
                 </button>
                 <button
                   onClick={() => setShowViewReports(true)}
-                  className="btn-secondary flex items-center justify-center gap-2 flex-1 lg:flex-none px-6"
+                  className="btn-secondary flex items-center justify-center gap-2 flex-1 md:flex-none px-6"
                 >
                   <BarChart3 size={18} />
                   <span>View Reports</span>
@@ -358,7 +358,7 @@ const AdminDashboard = () => {
             </div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-6 mb-8 w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6 mb-8 w-full">
               <StatsCard
                 title="Total Tenants"
                 value={stats.totalTenants}
