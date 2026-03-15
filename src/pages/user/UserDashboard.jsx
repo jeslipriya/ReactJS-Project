@@ -17,7 +17,9 @@ import {
   MessageCircle,
   FileText,
   Briefcase,
-  Menu
+  Menu,
+  LogIn,
+  LogOut
 } from 'lucide-react'
 import Sidebar from '../../components/Sidebar'
 import StatsCard from '../../components/StatsCard'
@@ -90,12 +92,12 @@ const UserDashboard = () => {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        className="fixed top-4 left-4 z-40 p-3 bg-primary text-white rounded-xl shadow-soft"
+        className="fixed top-4 left-4 z-40 p-3 bg-primary text-white rounded-xl shadow-soft lg:hidden"
       >
         <Menu size={20} />
       </button>
       
-      <main className="flex-1 lg:ml-0 p-4 lg:p-8">
+      <main className="flex-1 p-4 lg:p-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
