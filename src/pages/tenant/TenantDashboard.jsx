@@ -61,12 +61,12 @@ const TenantDashboard = () => {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        className="lg:hidden fixed top-4 left-4 z-40 p-3 bg-primary text-white rounded-xl shadow-soft"
+        className="fixed top-4 left-4 z-40 p-3 bg-primary text-white rounded-xl shadow-soft"
       >
         <Menu size={20} />
       </button>
       
-      <main className="flex-1 p-8 lg:ml-64">
+      <main className="flex-1 p-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
