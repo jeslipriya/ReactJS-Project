@@ -82,14 +82,16 @@ const Login = () => {
           </div>
 
           <div className="mt-8 p-4 bg-sidebar rounded-xl border border-border">
-            <h3 className="font-medium mb-2">Demo Credentials</h3>
+            <h3 className="font-bold mb-2">Demo Credentials</h3>
             <div className="space-y-2 text-sm">
               <p><span className="font-semibold">Admin:</span> admin@system.com / admin123</p>
               <p><span className="font-semibold">Tenant:</span> admin@zoho.com / tenant123</p>
               <p><span className="font-semibold">User:</span> jesli@zoho.com / user123</p>
+            </div>  
+          </div>
 
+          <div className="mt-8 p-4 bg-sidebar rounded-xl border border-border">
               <p>Login as <span className="font-semibold text-primary">System Admin</span> to explore all features of this platform </p>
-            </div>
           </div>
         </div>
       </motion.div>
