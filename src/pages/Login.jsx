@@ -88,7 +88,7 @@ const Login = () => {
               <p><span className="font-semibold">Tenant:</span> admin@zoho.com / tenant123</p>
               <p><span className="font-semibold">User:</span> jesli@zoho.com / user123</p>
 
-              <div className="mt-8 text-center">
+              <div className="mt-8 pt-3 border-t border-border text-center">
                 <p className="text-xs text-textLight/80">
                   Login as <span className="font-medium text-primary">System Admin</span> for full access
                 </p>    
