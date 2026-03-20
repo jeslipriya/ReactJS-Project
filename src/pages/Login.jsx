@@ -89,7 +89,7 @@ const Login = () => {
               <p><span className="font-semibold">User:</span> jesli@zoho.com / user123</p>
 
               <div className="mt-6 text-center">
-                <p className="text-textLight">Login as <span className="font-semibold">System Admin</span> to explore all features of this platform </p>    
+                <p className="text-textLight text-sm">Login as <span className="font-semibold">System Admin</span> to explore all features of this platform </p>    
               </div>
             </div>  
           </div>
