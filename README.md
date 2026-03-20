@@ -115,11 +115,11 @@ npm run dev
 
 ## Default Login Credentials
 
-| Role   | Email                                       | Password  |
-| ------ | ------------------------------------------- | --------- |
-| Admin  | [admin@system.com](mailto:admin@system.com) | admin123  |
-| Tenant | [admin@zoho.com](mailto:admin@zoho.com)     | tenant123 |
-| User   | [jesli@zoho.com](mailto:jesli@zoho.com)     | user123   |
+| Role   | Email                  | Password  |
+| ------ | ---------------------- | --------- |
+| Admin  | [admin@system.com]     | admin123  |
+| Tenant | [admin@zoho.com]       | tenant123 |
+| User   | [jesli@zoho.com]       | user123   |
 
 ## Database Schema
 
